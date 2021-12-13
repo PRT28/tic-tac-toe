@@ -1,0 +1,45 @@
+*{
+    margin: 10px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    background-color: #3E8E7E;
+    color: #FAEDC6;
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+.board{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    margin: auto;
+}
+.board li{
+    height: 40px;
+    width: 40px;
+    font-size: 30px;
+    background: #7CD1B8;
+    color: #FABB51;
+    list-style: none;
+    text-align: center;
+    border-radius: 5px;
+}
+.board li:hover{
+    cursor: pointer;
+    background: #107964;
+}
+#message{
+    background: #519259;
+    color: #FAEDC6;
+}
