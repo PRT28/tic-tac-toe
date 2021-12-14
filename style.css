@@ -23,6 +23,7 @@ h1{
     right: 0;
     
     margin: auto;
+    z-index: 2;
 }
 .board li{
     height: 40px;
@@ -44,6 +45,12 @@ h1{
     position: absolute;
     top:110px;
     width: 100%;
+    font-size: 20px;
+}
+#message.animated{
+    animation-name: mess;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
 }
 .tic,.tac,.toe{
     display: inline-block;
@@ -78,7 +85,23 @@ h1{
 	background-color:#22a32d;
 }
 
+canvas{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    margin: auto;
+    z-index: 1;
+}
+
 @keyframes anim{
     from {margin-left: 3px; margin-right: 3px; font-size: 30px; font-weight: 600; }
     to {margin-left: 8px; margin-right: 8px; font-size: 60px; font-weight: 300;}
+}
+
+@keyframes mess{
+    from {font-size: 20px;}
+    to {font-size: 35px;}
 }
