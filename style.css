@@ -1,5 +1,4 @@
 *{
-    margin: 10px;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
@@ -42,4 +41,44 @@ h1{
 #message{
     background: #519259;
     color: #FAEDC6;
+    position: absolute;
+    top:110px;
+    width: 100%;
+}
+.tic,.tac,.toe{
+    display: inline-block;
+    font-size: 30px;
+    margin: 3px;
+    font-weight: 600;
+    animation-name: anim;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+.b {
+	box-shadow:inset 0px 0px 0px 0px #437917;
+	background:linear-gradient(to bottom, #6febbb 5%, #22a32d 100%);
+	background-color:#3b7d4b;
+	border-radius:7px;
+	border:0px;
+	display:inline-block;
+	cursor:pointer;
+	color:#FAEDC6;
+	font-family:Arial;
+	font-size:13px;
+	padding:13px 51px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #344d3a;
+    position: absolute;
+    top:160px;
+    left: 45%;
+}
+.b:hover {
+	background:linear-gradient(to bottom, #22a32d 5%, #6febbb 100%);
+	background-color:#22a32d;
+}
+
+@keyframes anim{
+    from {margin-left: 3px; margin-right: 3px; font-size: 30px; font-weight: 600; }
+    to {margin-left: 8px; margin-right: 8px; font-size: 60px; font-weight: 300;}
 }

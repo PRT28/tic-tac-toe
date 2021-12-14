@@ -6,12 +6,15 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
     </head>
     <body>
-        <h1>Tic Tac Toe</h1>
+        <div class="tic">Tic</div><div class="tac">Tac</div><div class="toe">Toe</div>
         <div id="message"></div>
+        <button id="reload" class="b">Reload</button>
         <div class="play">
             <ul class="board">
+                <li class="box" id="0"></li>
                 <li class="box" id="1"></li>
                 <li class="box" id="2"></li>
                 <li class="box" id="3"></li>
@@ -20,8 +23,8 @@
                 <li class="box" id="6"></li>
                 <li class="box" id="7"></li>
                 <li class="box" id="8"></li>
-                <li class="box" id="9"></li>
             </ul>
         </div>
+        <script src="index.js"></script>
     </body>
 </html>
