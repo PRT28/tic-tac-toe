@@ -97,6 +97,7 @@ $(document).ready(function(){
         var canvas = $("#paper")[0];
         var c = canvas.getContext("2d");
         var amount = 0;
+        c.beginPath();
         if(a==0 && b==2){
             var startX = 0;
             var startY = 20;
@@ -138,7 +139,7 @@ $(document).ready(function(){
             var endX = 200;
             var endY = 180;
         }
-        setInterval(function() {
+        function myTimer() {
             amount += 0.05; 
             if (amount > 1) amount = 1;
             c.clearRect(0, 0, canvas.width, canvas.height);
@@ -146,7 +147,12 @@ $(document).ready(function(){
             c.moveTo(startX, startY);
             c.lineTo(startX + (endX - startX) * amount, startY + (endY - startY) * amount);
             c.stroke();
-        }, 30);
+        }
+        const myInterval = setInterval(myTimer, 30);
+        $("#reload").on("click",function(){
+            clearInterval(myInterval);
+            c.clearRect(0, 0, canvas.width, canvas.height);
+         });
         winMessage(winner);
     }
 
@@ -163,8 +169,10 @@ $(document).ready(function(){
     function reset(){
         values=["","","","","","","","",""];
         count=0;
-        $(".box").text("")
+        $("#message").text("It's "+player+"'s turns")
+        $(".box").text("");
         game=true;
+        $("canvas").css("z-index",1)
     }
 
     $("#reload").click(function(){
